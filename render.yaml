@@ -1,0 +1,19 @@
+# Blueprint de Render (servicio web único: frontend y backend mismo dominio)
+services:
+  - type: web
+    name: bibliolab
+    runtime: python
+    plan: free
+    buildCommand: python -m compileall -q backend
+    startCommand: python backend/server.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: APP_ENV
+        value: production
+      - key: DEMO_SEED
+        value: '1'
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: DB_PATH
+        value: /opt/render/project/src/data/bibliolab.sqlite3
