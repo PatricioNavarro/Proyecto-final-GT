@@ -1,0 +1,25 @@
+# Glosario del negocio
+
+- **Alumno:** usuario habilitado para reservar libros y recibir préstamos.
+- **Bibliotecario:** usuario administrador responsable de registrar retiros y devoluciones.
+- **Título:** registro de una obra en el catálogo, con autor, categoría y cantidad de copias.
+- **Ejemplar:** unidad física disponible de un título; se representa en el contador de copias.
+- **Catálogo:** conjunto de títulos que muestra la aplicación.
+- **Préstamo activo:** retiro confirmado que todavía no tiene una devolución registrada.
+- **Préstamo vencido:** préstamo activo cuya fecha de devolución es anterior al día actual.
+- **Vencimiento:** fecha límite en la que debe devolverse el libro.
+- **Renovación:** extensión única de 7 días sobre el vencimiento del préstamo.
+- **Reserva:** solicitud de un alumno para obtener un ejemplar de un título.
+- **Reserva en espera:** solicitud pendiente porque no hay ejemplares libres para asignar.
+- **Reserva lista:** solicitud con un ejemplar separado y plazo de retiro de 48 horas.
+- **Reserva cumplida:** solicitud cuya copia fue retirada y convertida en préstamo.
+- **Reserva cancelada:** solicitud descartada por su dueño o el bibliotecario.
+- **Reserva vencida:** reserva lista que no se retiró en el plazo establecido.
+- **Lista FIFO:** orden que respeta al que solicitó primero; desempata por ID.
+- **Ejemplar comprometido:** copia asociada a un préstamo activo o reserva lista.
+- **Disponibilidad:** `copias totales − préstamos activos − reservas listas`.
+- **Regla de negocio (RN):** condición verificable que define cómo opera la biblioteca.
+- **Historia de usuario (HU):** función solicitada desde el punto de vista de un rol.
+- **Criterio de aceptación:** ejemplo Dado/Cuando/Entonces para comprobar una historia.
+- **Transacción:** conjunto de cambios en la base que se confirma completo o se deshace.
+- **Sesión:** autenticación temporal que permite identificar al usuario sin volver a enviar su contraseña.

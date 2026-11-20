@@ -1,0 +1,56 @@
+test_cancel_promotes_next_in_queue (test_core.LibraryTests.test_cancel_promotes_next_in_queue) ... ok
+test_cannot_bypass_ready_reservation (test_core.LibraryTests.test_cannot_bypass_ready_reservation) ... ok
+test_catalog_case_insensitive_filter (test_core.LibraryTests.test_catalog_case_insensitive_filter) ... ok
+test_concurrent_reservations_last_copy (test_core.LibraryTests.test_concurrent_reservations_last_copy) ... /mnt/data/bibliolab-entrega/backend/core.py:233: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f509088de40>
+  if con.execute("SELECT 1 FROM reservations WHERE user_id=? AND book_id=? AND status IN ('waiting','ready')", (user['id'],book_id)).fetchone():
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/data/bibliolab-entrega/backend/core.py:233: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f509088df30>
+  if con.execute("SELECT 1 FROM reservations WHERE user_id=? AND book_id=? AND status IN ('waiting','ready')", (user['id'],book_id)).fetchone():
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/data/bibliolab-entrega/backend/core.py:233: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f509088e110>
+  if con.execute("SELECT 1 FROM reservations WHERE user_id=? AND book_id=? AND status IN ('waiting','ready')", (user['id'],book_id)).fetchone():
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/mnt/data/bibliolab-entrega/backend/core.py:233: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f509088e020>
+  if con.execute("SELECT 1 FROM reservations WHERE user_id=? AND book_id=? AND status IN ('waiting','ready')", (user['id'],book_id)).fetchone():
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_due_date_is_fourteen_calendar_days (test_core.LibraryTests.test_due_date_is_fourteen_calendar_days) ... ok
+test_duplicate_active_loan_rejected (test_core.LibraryTests.test_duplicate_active_loan_rejected) ... ok
+test_duplicate_reservation_rejected (test_core.LibraryTests.test_duplicate_reservation_rejected) ... ok
+test_first_reservation_ready_and_next_waiting (test_core.LibraryTests.test_first_reservation_ready_and_next_waiting) ... ok
+test_invalid_login (test_core.LibraryTests.test_invalid_login) ... ok
+test_login_and_session_logout (test_core.LibraryTests.test_login_and_session_logout) ... ok
+test_max_three_active_loans (test_core.LibraryTests.test_max_three_active_loans) ... ok
+test_multiple_concurrent_admin_checkouts_single_copy (test_core.LibraryTests.test_multiple_concurrent_admin_checkouts_single_copy) ... ok
+test_new_stock_promotes_queue (test_core.LibraryTests.test_new_stock_promotes_queue) ... ok
+test_non_owner_cannot_cancel_reservation (test_core.LibraryTests.test_non_owner_cannot_cancel_reservation) ... ok
+test_one_renewal_adds_seven_days (test_core.LibraryTests.test_one_renewal_adds_seven_days) ... ok
+test_overdue_blocks_new_loan_and_reservation (test_core.LibraryTests.test_overdue_blocks_new_loan_and_reservation) ... ok
+test_overdue_loan_cannot_be_renewed (test_core.LibraryTests.test_overdue_loan_cannot_be_renewed) ... ok
+test_renewal_denied_if_someone_waiting (test_core.LibraryTests.test_renewal_denied_if_someone_waiting) ... ok
+test_reservation_auto_expires_after_48_hours (test_core.LibraryTests.test_reservation_auto_expires_after_48_hours) ... ok
+test_return_promotes_fifo_waiting (test_core.LibraryTests.test_return_promotes_fifo_waiting) ... ok
+test_roles_cannot_modify_books_or_loans (test_core.LibraryTests.test_roles_cannot_modify_books_or_loans) ... ok
+test_seed_has_catalog_and_users (test_core.LibraryTests.test_seed_has_catalog_and_users) ... ok
+test_stock_cannot_go_below_loans_and_ready_holds (test_core.LibraryTests.test_stock_cannot_go_below_loans_and_ready_holds) ... ok
+test_student_email_unique_and_password_validation (test_core.LibraryTests.test_student_email_unique_and_password_validation) ... ok
+test_auth_and_authorization (test_http.HttpTests.test_auth_and_authorization) ... 127.0.0.1 - "GET /api/admin/dashboard HTTP/1.1" 401 -
+127.0.0.1 - "POST /api/auth/login HTTP/1.1" 200 -
+127.0.0.1 - "GET /api/books HTTP/1.1" 200 -
+127.0.0.1 - "GET /api/admin/dashboard HTTP/1.1" 403 -
+127.0.0.1 - "POST /api/auth/logout HTTP/1.1" 200 -
+127.0.0.1 - "GET /api/me HTTP/1.1" 401 -
+ok
+test_cross_origin_write_rejected (test_http.HttpTests.test_cross_origin_write_rejected) ... 127.0.0.1 - "POST /api/auth/login HTTP/1.1" 403 -
+ok
+test_health_and_static (test_http.HttpTests.test_health_and_static) ... 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - "GET / HTTP/1.1" 200 -
+ok
+test_reject_non_json_and_bad_path (test_http.HttpTests.test_reject_non_json_and_bad_path) ... 127.0.0.1 - "GET /api/nonexistent HTTP/1.1" 401 -
+127.0.0.1 - "GET /../../etc/passwd HTTP/1.1" 404 -
+ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 5.262s
+
+OK
